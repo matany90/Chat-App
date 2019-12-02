@@ -8,14 +8,14 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const res = await axios.get('https://chat-app-server-matan.herokuapp.com/');
-    this.setState({ text: res.test });
+    const { data: { test } } = await axios.get('https://chat-app-server-matan.herokuapp.com/');
+    this.setState({ text: test });
   }
 
   render() {
     return (
       <div>
-      {this.state.text}
+        {this.state.text}
       </div>
     );
   }
