@@ -6,6 +6,7 @@ import './MainScreen.css';
 const MainScreen = () => {
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
+    const isButtonDisabled = name === '' || room === '';
 
     return (
         <div className="joinOuterContainer">
@@ -20,7 +21,12 @@ const MainScreen = () => {
                 <Link
                     onClick={event => (!name || !room) ? event.preventDefault() : null}
                     to={`/chat?name=${name}&room=${room}`}>
-                    <button className="button mt-20" type="submit">Sign In</button>
+                    <button
+                        disabled={isButtonDisabled}
+                        className={isButtonDisabled ? "button mt-20 disabled" : "button mt-20 enable"}
+                        type="submit">
+                        Sign In
+                    </button>
                 </Link>
             </div>
         </div>

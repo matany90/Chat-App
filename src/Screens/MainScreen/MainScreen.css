@@ -39,10 +39,8 @@ html, body {
   }
   
   .button {
-      color: #fff !important;
       text-transform: uppercase;
       text-decoration: none;
-      background: #2979FF;
       padding: 20px;
       border-radius: 5px;
       display: inline-block;
@@ -52,6 +50,16 @@ html, body {
   
   .mt-20 {
     margin-top: 20px;
+  }
+
+  .enable {
+    color: #fff;
+    background: #2979FF;
+  }
+
+  .disabled {
+    background: '#fff';
+    color: '#2979FF';
   }
   
   @media (min-width: 320px) and (max-width: 480px) {
