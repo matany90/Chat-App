@@ -1,24 +1,14 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+import MainScreen from './Screens/MainScreen';
+import ChatScreen from './Screens/ChatScreen';
 
-class App extends Component {
-  state = {
-    text: ''
-  }
-
-  async componentDidMount() {
-    const { data: { test } } = await axios.get('https://chat-app-server-matan.herokuapp.com/');
-    this.setState({ text: test });
-  }
-
-  render() {
-    return (
-      <div>
-        {this.state.text}
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Router>
+    <Route path="/" exact component={MainScreen} />
+    <Route path="/chat" component={ChatScreen} />
+  </Router>
+)
 
 export default App;
