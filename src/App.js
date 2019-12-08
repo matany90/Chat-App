@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import MainScreen from './Screens/MainScreen';
-import ChatScreen from './Screens/ChatScreen';
+import MainScreen from './Screens/MainScreen/MainScreen';
+import ChatScreen from './Screens/ChatScreen/ChatScreen';
 
 const App = () => (
   <Router>
