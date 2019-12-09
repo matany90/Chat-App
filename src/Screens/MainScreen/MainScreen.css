@@ -1,5 +1,4 @@
 html, body {
-    font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
   }
@@ -23,12 +22,16 @@ html, body {
   
   .joinInnerContainer {
     width: 20%;
+    height: 100%;
   }
   
   .joinInput {
     border-radius: 0;
     padding: 15px 20px;
     width: 100%;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 25px;
   }
   
   .heading {
@@ -36,16 +39,27 @@ html, body {
     font-size: 2.5em;
     padding-bottom: 10px;
     border-bottom: 2px solid white;
+    margin: 0;
+  }
+
+  .subHeading {
+    color: white;
+    font-weight: 100
+  }
+
+  .chatLogo {
+    margin-top: 40px;
   }
   
   .button {
       text-transform: uppercase;
       text-decoration: none;
       padding: 20px;
-      border-radius: 5px;
+      border-radius: 25px;
       display: inline-block;
       border: none;
       width: 100%;
+      font-size: 20px;
   }
   
   .mt-20 {

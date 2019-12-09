@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import queryString from 'query-string';
 import io from 'socket.io-client';
-import './ChatScreen';
+import './ChatScreen.css';
 
 import InfoBar from '../../components/InputBar/InfoBar'
 import Input from '../../components/Input/Input';
@@ -57,13 +57,11 @@ const ChatScreen = ({ location }) => {
                     room={room}
                 />
                 <Messages messages={messages} name={name} />
-                <div style={{bottom: 0, position: 'absolute', width: '100%'}}>
-                    <Input
-                        message={message}
-                        setMessage={setMessage}
-                        sendMessage={sendMessage}
-                    />
-                </div>
+                <Input
+                    message={message}
+                    setMessage={setMessage}
+                    sendMessage={sendMessage}
+                />
             </div>
         </div>
     );

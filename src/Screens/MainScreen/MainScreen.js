@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import './MainScreen.css';
+import chatLogo from '../../res/img/chatLogo.png'
 
 const MainScreen = () => {
     const [name, setName] = useState('');
@@ -11,12 +12,14 @@ const MainScreen = () => {
     return (
         <div className="joinOuterContainer">
             <div className="joinInnerContainer">
-                <h1 className="heading">Join</h1>
+            <img className="chatLogo" src={chatLogo} alt="chat Logo" />
+                <h1 className="heading">ברוכים הבאים לצ'אט של מתן</h1>
+                <h3 className="subHeading">זה הזמן להתחיל לצ'וטט! כנסו עם החברים לאותו חדר והכיף מתחיל</h3>
                 <div>
-                    <input placeholder="Name" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
+                    <input placeholder="הכינוי שלך" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} />
                 </div>
                 <div>
-                    <input placeholder="Room" className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value)} />
+                    <input placeholder="שם החדר" className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value)} />
                 </div>
                 <Link
                     onClick={event => (!name || !room) ? event.preventDefault() : null}
@@ -25,7 +28,7 @@ const MainScreen = () => {
                         disabled={isButtonDisabled}
                         className={isButtonDisabled ? "button mt-20 disabled" : "button mt-20 enable"}
                         type="submit">
-                        Sign In
+                        התחבר
                     </button>
                 </Link>
             </div>
