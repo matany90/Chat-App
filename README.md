@@ -5,6 +5,9 @@
 A Chat-messaging application that allows users to open private "rooms" and talk with other users there. 
 The app build in Scoket architecture (using Socket.io module for server and Socket-io-client for client)
 
+For server-side source code:
+https://github.com/matany90/chat-app-server
+
 Technologies I used:
 - React
 - Node with Express
